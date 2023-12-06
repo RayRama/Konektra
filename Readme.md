@@ -1,3 +1,5 @@
+# Under development
+
 ## Konektra
 
 TBA (To be Announced)
@@ -11,3 +13,17 @@ TBA (To be Announced)
 - (CC) C295BSY4120 – Lintang Aji Delamansyah – Universitas Pembangunan Nasional Veteran Jakarta
 - (MD) A179BSY2564 – Dimas Thaqif Attaulah – Universitas Ahmad Dahlan
 - (MD) A296BSX2668 – Afrida Lailiyah Hanim – Universitas Pembangunan Nasional Veteran Jawa Timur
+
+## Project Structure
+
+```bash
+.
+├── README.md - This file.
+├── "1 - Machine Learning"
+│   ├── "Detection"
+│   │   ├── "datasets" because of the size of the dataset, we can't upload it to github.
+│   ├── "TTS"
+├── "2 - CC - Cloud Computing"
+├── "3 - Android - Mobile Development"
+
+```
