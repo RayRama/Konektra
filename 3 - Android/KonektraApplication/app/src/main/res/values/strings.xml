@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Konektra</string>
+    <string name="isi_snk">Terakhir diubah pada [28 September 2023]\n\nTerimakasih telah berkunjung di Konektra.\n\nSyarat dan Ketentuan berikut.. \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="boldSnK"><![CDATA[Syarat & Ketentuan]]></string>
+    <string name="cbSnK">Saya telah membaca dan menyetujui syarat dan ketentuan aplikasi</string>
+    <string name="title_menu_1">Terjemahkan</string>
+    <string name="desc_menu_1">Komunikasi tanpa\nbatas dan halanga</string>
+    <string name="title_menu_2">Text to Speech</string>
+    <string name="desc_menu_2">Ekspresikan isi hatimu\nmelalui suara</string>
+    <string name="title_menu_3">Text to Sign</string>
+    <string name="desc_menu_3">Sampaikan\nperasaanmu menjadi\nisyarat</string>
+    <string name="title_menu_4">Sign to Text</string>
+    <string name="desc_menu_4">Sampaikan isyaratmu\nkepada mereka</string>
+    <string name="finish">Selesai</string>
+</resources>

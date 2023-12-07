@@ -1,0 +1,54 @@
+<!-- activity_terms_conditions.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".snk.SnK">
+
+    <TextView
+        android:id="@+id/headerText"
+        android:fontFamily="@font/istokwebbold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/boldSnK"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/termsText"
+            android:fontFamily="@font/istokwebregular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/isi_snk"
+            android:textSize="16sp"/>
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/agreeCheckBox"
+        android:fontFamily="@font/istokwebregular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cbSnK"/>
+
+    <Button
+        android:id="@+id/continueButton"
+        android:fontFamily="@font/istokwebregular"
+        android:layout_width="match_parent"
+        android:alpha="0.5"
+        android:clickable="false"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_background"
+        android:onClick="onContinueButtonClick"
+        android:text="Lanjutkan" />
+    
+
+</LinearLayout>
