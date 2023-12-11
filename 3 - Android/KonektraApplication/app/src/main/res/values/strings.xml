@@ -12,4 +12,31 @@
     <string name="title_menu_4">Sign to Text</string>
     <string name="desc_menu_4">Sampaikan isyaratmu\nkepada mereka</string>
     <string name="finish">Selesai</string>
+    <string name="title_welcome_page">Hi, Selamat Datang di Konektra!</string>
+    <string name="message_welcome_page">Yuk gunakan penerjemah bahasa isyarat dengan Konektra!</string>
+    <string name="title_tv">Informasi Terkini</string>
+    <string name="description">Description</string>
+    <string name="summary">Summary</string>
+    <string name="detail_description">Detail Description</string>
+    <string name="desc_tv">Jangan lewatkan informasi terkini konektra</string>
+    <string name="tts">Text To Speech</string>
+    <string name="long_description">Silahkan Mengisi</string>
+    <string-array name="data_name">
+        <item>The Use of Text-to-Speech Feature</item>
+        <item>The Use of Text-to-Sign Feature</item>
+        <item>The Use of Sign-to-Text Feature</item>
+    </string-array>
+    <string-array name="data_description">
+        <item>A functionality where written text is converted into spoken words. This feature could be useful for providing spoken explanations, translations, or additional context to complement the signed content.</item>
+        <item>A valuable tool for expressing written information into the dynamic and expressive medium of sign language gestures, it facilitates effective communication by allowing users to deliver written content into the vocabulary of sign language.</item>
+        <item>A functionality that enables users to input gestures in sign language, with the app subsequently translating these visual expressions into written text. This feature empowers users to convert signed content into a readable and accessible format.</item>
+    </string-array>
+    <integer-array name="data_photo">
+        <item>@drawable/img1</item>
+        <item>@drawable/img2</item>
+        <item>@drawable/img3</item>
+    </integer-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete_button">Hapus</string>
 </resources>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".snk.SnK">
+    tools:context=".ui.snk.SnK">
 
     <TextView
         android:id="@+id/headerText"
@@ -49,6 +49,4 @@
         android:background="@drawable/btn_background"
         android:onClick="onContinueButtonClick"
         android:text="Lanjutkan" />
-    
-
 </LinearLayout>
