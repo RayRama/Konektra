@@ -1,0 +1,13 @@
+<!-- res/drawable/background_button.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/Blue"/>
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/logotts"
+        android:scaleGravity="center"
+        android:scaleHeight="75%"
+        android:scaleWidth="75%"/>
+</layer-list>

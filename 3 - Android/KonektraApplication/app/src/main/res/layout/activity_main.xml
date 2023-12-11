@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/LLHome"
         android:layout_width="match_parent"
         android:layout_height="226dp"
         android:background="@color/Blue"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iv_tts">
     </LinearLayout>
 
     <ImageView
@@ -61,51 +63,83 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/iv_tts"
-        android:layout_width="105dp"
-        android:layout_height="105dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_width="89dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bgtta"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/texttospeech_btn" />
+        app:layout_constraintTop_toBottomOf="@id/LLHome"
+        app:layout_constraintEnd_toStartOf="@id/iv_ttsign"/>
 
-    <ImageView
+    <TextView
+        android:id="@+id/textViewTTS"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/texttospeech"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/iv_tts"
+        app:layout_constraintStart_toStartOf="@id/iv_tts"
+        app:layout_constraintEnd_toEndOf="@id/iv_tts"/>
+    <TextView
+        android:id="@+id/textViewTTSign"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/text_to_sign"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/iv_ttsign"
+        app:layout_constraintStart_toStartOf="@id/iv_ttsign"
+        app:layout_constraintEnd_toEndOf="@id/iv_ttsign"/>
+    <TextView
+        android:id="@+id/textViewSTT"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/sign_to_text"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/iv_stt"
+        app:layout_constraintStart_toStartOf="@id/iv_stt"
+        app:layout_constraintEnd_toEndOf="@id/iv_stt"/>
+
+    <ImageButton
         android:id="@+id/iv_ttsign"
-        android:layout_width="105dp"
-        android:layout_height="105dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/texttosign_btn" />
+        android:layout_width="89dp"
+        android:layout_height="77dp"
+        android:background="@drawable/bgtta"
+        app:layout_constraintStart_toEndOf="@id/iv_tts"
+        app:layout_constraintTop_toTopOf="@id/iv_tts"
+        app:layout_constraintEnd_toStartOf="@id/iv_stt"/>
 
     <ImageView
         android:id="@+id/iv_stt"
-        android:layout_width="105dp"
-        android:layout_height="105dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="89dp"
+        android:layout_height="77dp"
+        android:background="@drawable/bgtta"
+        app:layout_constraintStart_toEndOf="@id/iv_ttsign"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/signtotext_btn" />
+        app:layout_constraintTop_toTopOf="@id/iv_tts"/>
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="36dp"
         android:text="@string/title_tv"
         android:textColor="@color/black"
         android:textSize="18sp"
@@ -143,23 +177,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title"
         app:layout_constraintVertical_bias="0.0" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="64dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineVertical"
-        android:layout_width="wrap_content"
-        android:layout_height="64dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

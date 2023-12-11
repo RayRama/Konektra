@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.dicoding.konektraapplication.MainActivity
 import com.dicoding.konektraapplication.R
 import com.dicoding.konektraapplication.databinding.ActivityTextToSpeechBinding
 import java.util.Locale
@@ -47,7 +48,7 @@ class TextToSpeechActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         editText = findViewById(R.id.EdText)
         btnHapus = findViewById(R.id.btnHapus)
         btnSimpan = findViewById(R.id.btnSimpan)
-        btnHistory = findViewById(R.id.btnHistory)
+//        btnHistory = findViewById(R.id.btnHistory)
         textToSpeech = TextToSpeech(this,this)
 
 
@@ -72,10 +73,18 @@ class TextToSpeechActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
             }
         }
 
-        btnHistory.setOnClickListener {
-            startActivity(Intent(this, HistoryActivity::class.java))
-        }
+//        btnHistory.setOnClickListener {
+//            startActivity(Intent(this, HistoryActivity::class.java))
+//        }
 
+        back()
+    }
+
+    private fun back(){
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onInit(status: Int) {
