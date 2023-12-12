@@ -40,15 +40,12 @@ class TextToSpeechActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         textToSpeechViewModel = ViewModelProvider(this).get(TextToSpeechViewModel::class.java)
         historyAdapter = HistoryAdapter(textToSpeechViewModel.historyList)
 
-//        historyRecyclerView = findViewById(R.id.historyRecyclerView)
-//        historyRecyclerView.layoutManager = LinearLayoutManager(this)
-//        historyRecyclerView.adapter = historyAdapter
+
 
         speakButton = findViewById(R.id.speakButton)
         editText = findViewById(R.id.EdText)
         btnHapus = findViewById(R.id.btnHapus)
         btnSimpan = findViewById(R.id.btnSimpan)
-//        btnHistory = findViewById(R.id.btnHistory)
         textToSpeech = TextToSpeech(this,this)
 
 
@@ -80,6 +77,7 @@ class TextToSpeechActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         back()
     }
 
+
     private fun back(){
         binding.btnBack.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -89,17 +87,13 @@ class TextToSpeechActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
-            // Inisialisasi sukses, atur bahasa suara ke bahasa Inggris (US)
             val result = textToSpeech.setLanguage(Locale.US)
 
             if (result == TextToSpeech.LANG_MISSING_DATA ||
                 result == TextToSpeech.LANG_NOT_SUPPORTED
             ) {
-                // Bahasa tidak didukung, mungkin perlu mengunduh data bahasa (tambahkan logika pengunduhan di sini)
-                // Atau berikan umpan balik kepada pengguna bahwa bahasa tidak didukung
                 Toast.makeText(this, "Bahasa tidak didukung.", Toast.LENGTH_SHORT).show()
             } else {
-                // Inisialisasi sukses dan bahasa didukung
                 Toast.makeText(this, "Text-to-Speech siap digunakan.", Toast.LENGTH_SHORT).show()
             }
         } else {
@@ -128,6 +122,7 @@ class TextToSpeechActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 //        val ringtone = RingtoneManager.getRingtone(applicationContext, notification)
 //        ringtone.play()
     }
+
 
     override fun onDestroy() {
         if (::textToSpeech.isInitialized) {

@@ -16,7 +16,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/iv_tts">
+
+
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ib_setting"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/baseline_settings_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -68,7 +80,7 @@
         android:layout_width="89dp"
         android:layout_height="77dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/bgtta"
+        android:background="@drawable/bgtts"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/LLHome"
         app:layout_constraintEnd_toStartOf="@id/iv_ttsign"/>
@@ -120,7 +132,7 @@
         android:id="@+id/iv_ttsign"
         android:layout_width="89dp"
         android:layout_height="77dp"
-        android:background="@drawable/bgtta"
+        android:background="@drawable/bgtts2"
         app:layout_constraintStart_toEndOf="@id/iv_tts"
         app:layout_constraintTop_toTopOf="@id/iv_tts"
         app:layout_constraintEnd_toStartOf="@id/iv_stt"/>
@@ -129,7 +141,7 @@
         android:id="@+id/iv_stt"
         android:layout_width="89dp"
         android:layout_height="77dp"
-        android:background="@drawable/bgtta"
+        android:background="@drawable/bgsst"
         app:layout_constraintStart_toEndOf="@id/iv_ttsign"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/iv_tts"/>
@@ -141,7 +153,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
         android:text="@string/title_tv"
-        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -157,7 +168,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/desc_tv"
-        android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/rv_konektra"
         app:layout_constraintEnd_toEndOf="parent"
