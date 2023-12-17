@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from PIL import Image
 import os
+import base64
 
 app = Flask(__name__)
 
@@ -28,8 +29,14 @@ def get_image():
         # Convert the image to bytes
         img_byte_array = Image.Image.tobytes(img)
 
-        # Return the image as a response
-        response = jsonify({'image': img_byte_array.decode('latin-1')})
+        # Convert bytes to base64
+        img_base64 = base64.b64encode(img_byte_array).decode('utf-8')
+
+        # Remove file format extension and convert title to lowercase
+        file_title_without_extension = os.path.splitext(file_title)[0].lower()
+
+        # Return the response with options first, followed by the image in base64 format
+        response = jsonify({'options': {'title': file_title_without_extension}, 'image': img_base64})
         return response, 202
     else:
         return jsonify({'error': f"Image with title '{file_title}' not found."}), status_code
