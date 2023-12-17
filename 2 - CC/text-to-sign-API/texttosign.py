@@ -1,12 +1,13 @@
 from flask import Flask, request, jsonify
 from PIL import Image
+import os
 
 app = Flask(__name__)
 
 def retrieve_image_by_title(file_title):
     try:
         # Assuming images are in the 'source' folder within the same directory as the script
-        image_path = f"source/{file_title}.jpg"  # You can adjust the file extension as needed
+        image_path = os.path.join(os.path.dirname(__file__), 'source', file_title)
 
         # Open the image file
         img = Image.open(image_path)
