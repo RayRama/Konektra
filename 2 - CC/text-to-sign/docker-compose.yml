@@ -1,14 +1,11 @@
 version: "3"
 services:
-  konektra-api:
-    image: konektra-api:1.0
+  text-to-sign:
+    build: .
     ports:
-      - "5000:5000" # port yang akan di-expose ke host
-    networks:
-      - niat-yang-suci # buat network baru dengan nama bebas, kemduian ubah niat-yang-suci dengan nama network yang telah dibuat
+      - "5000:5000"
     volumes:
-      - /home/praktikumc/sequran-api:/app # sesuaikan direktori pada host yang akan di-mount ke direktori /app pada container
-
-networks:
-  niat-yang-suci: # ubah dengan nama network yang telah dibuat
-    external: true
+      - ./data:/app/data
+      - ./assets:/app/assets
+    environment:
+      - PORT=5000
