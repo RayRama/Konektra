@@ -1,12 +1,13 @@
 # Gunakan base image Python
-FROM python:3.8
+FROM python:3.10-bullseye
 
 # Set working directory di dalam container
 WORKDIR /app
 
 # Salin kode aplikasi dan file dependencies ke dalam container
 COPY requirements.txt .
-COPY texttosign.py .
+# Salin semua file yang ada di direktori ini ke dalam container
+COPY . . 
 
 # Install dependencies menggunakan pip
 RUN pip install --no-cache-dir -r requirements.txt
@@ -15,4 +16,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Perintah untuk menjalankan aplikasi saat container dimulai
-CMD ["python", "texttosign.py"]
+CMD ["python", "main.py"]

@@ -1,0 +1,4 @@
+nltk==3.8.1
+Flask==3.0.0
+Pillow==8.4.0
+waitress==2.1.2
