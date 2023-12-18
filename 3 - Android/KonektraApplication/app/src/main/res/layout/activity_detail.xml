@@ -12,38 +12,17 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="1000sp"
-            android:background="@color/Blue">
-
+            android:layout_height="1000sp">
             <ImageView
                 android:id="@+id/img_item_photo"
-                android:layout_width="193dp"
+                android:layout_width="match_parent"
                 android:layout_height="240dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="32dp"
                 android:scaleType="centerCrop"
-                card_view:layout_constraintBottom_toBottomOf="parent"
                 card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.0"
                 card_view:layout_constraintStart_toStartOf="parent"
                 card_view:layout_constraintTop_toTopOf="parent"
-                card_view:layout_constraintVertical_bias="0.137"
                 tools:src="@tools:sample/avatars" />
-
-            <TextView
-                android:id="@+id/tv_item_name"
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="24sp"
-                android:textColor="@color/white"
-                card_view:layout_constraintBottom_toTopOf="@+id/img_item_photo"
-                card_view:layout_constraintEnd_toEndOf="parent"
-                card_view:layout_constraintHorizontal_bias="0.497"
-                card_view:layout_constraintStart_toStartOf="parent"
-                card_view:layout_constraintTop_toTopOf="parent"
-                tools:text="@string/title_tv" />
 
             <TextView
                 android:id="@+id/tv_summary"
@@ -53,8 +32,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="20dp"
                 android:layout_toEndOf="@id/img_item_photo"
-                android:textSize="28sp"
-                android:textColor="@color/white"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 card_view:layout_constraintBottom_toTopOf="@+id/tv_detail_description"
                 card_view:layout_constraintEnd_toEndOf="parent"
@@ -72,8 +50,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="20dp"
                 android:ellipsize="end"
-                android:textSize="18sp"
-                android:textColor="@color/white"
+                android:textSize="16sp"
                 card_view:layout_constraintBottom_toBottomOf="parent"
                 card_view:layout_constraintEnd_toEndOf="parent"
                 card_view:layout_constraintHorizontal_bias="0.0"
@@ -81,6 +58,46 @@
                 card_view:layout_constraintTop_toBottomOf="@+id/img_item_photo"
                 card_view:layout_constraintVertical_bias="0.196"
                 tools:text="@string/detail_description" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="342dp"
+                android:layout_height="66dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/btn_background"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                card_view:cardElevation="7dp"
+                card_view:layout_constraintBottom_toBottomOf="@+id/img_item_photo"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.492"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/img_item_photo">
+
+                <TextView
+                    android:id="@+id/tv_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:text="@string/title_tv" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/btn_kembali"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/baseline_arrow_back_24"
+                android:backgroundTint="@color/white"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

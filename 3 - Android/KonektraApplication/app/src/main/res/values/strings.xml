@@ -52,4 +52,19 @@
     <string name="dark_mode_auto">Automatic</string>
     <string name="dark_mode_on">Dark mode</string>
     <string name="dark_mode_off">Light mode</string>
+    <string name="menu_camera">Camera</string>
+    <string name="menu_gallery">Galery</string>
+    <string name="alt_bottom_sheet_chevron">Bottom Sheet Indicator</string>
+    <string name="label_inference_time">Inference Time</string>
+    <string name="label_hand_detection_confidence_threshold">Detection</string>
+    <string name="alt_bottom_sheet_threshold_button_minus">Decresing Treshold</string>
+    <string name="alt_bottom_sheet_threshold_button_plus">increasing threshold</string>
+    <string name="label_hand_tracking_confidence_threshold">Tracking</string>
+    <string name="label_hand_presence_confidence_threshold">Presense</string>
+    <string name="label_delegate">Delegate</string>
+    <string name="tv_gallery_placeholder">Klik + untuk memasukkan gambar</string>
+    <string-array name="delegate_spinner_titles">
+        <item>CPU</item>
+        <item>GPU</item>
+    </string-array>
 </resources>

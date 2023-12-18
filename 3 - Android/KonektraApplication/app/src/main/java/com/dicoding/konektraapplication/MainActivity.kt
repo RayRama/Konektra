@@ -7,11 +7,12 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.dicoding.konektraapplication.adapter.ListKonektraAdapter
+import com.dicoding.konektraapplication.data.adapter.ListKonektraAdapter
 import com.dicoding.konektraapplication.data.Konektra
 import com.dicoding.konektraapplication.databinding.ActivityMainBinding
 import com.dicoding.konektraapplication.ui.setting.NightMode
 import com.dicoding.konektraapplication.ui.setting.SettingActivity
+import com.dicoding.konektraapplication.ui.sst.SignToTextActivity
 import com.dicoding.konektraapplication.ui.tts.TextToSpeechActivity
 import java.util.Locale
 
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         list.addAll(getListKonektra())
         showRecyclerList()
         tts()
+        sst()
         setting()
     }
 
@@ -71,6 +73,13 @@ class MainActivity : AppCompatActivity() {
     private fun setting(){
         binding.ibSetting.setOnClickListener {
             val intent = Intent(this, SettingActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun sst(){
+        binding.ivStt.setOnClickListener {
+            val intent = Intent(this, SignToTextActivity::class.java)
             startActivity(intent)
         }
     }
