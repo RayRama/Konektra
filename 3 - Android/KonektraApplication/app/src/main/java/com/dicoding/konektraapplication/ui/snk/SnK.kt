@@ -9,7 +9,7 @@ import android.widget.CheckBox
 import android.widget.Toast
 import com.dicoding.konektraapplication.MainActivity
 import com.dicoding.konektraapplication.R
-import com.dicoding.konektraapplication.boardingpage.onBoardingPage
+import com.dicoding.konektraapplication.ui.boardingpage.onBoardingPage
 
 class SnK : AppCompatActivity() {
 

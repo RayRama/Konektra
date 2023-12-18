@@ -10,6 +10,8 @@ android {
 
     buildFeatures{
         viewBinding = true
+        buildConfig = true
+        mlModelBinding = true
     }
 
     namespace = "com.dicoding.konektraapplication"
@@ -17,8 +19,8 @@ android {
 
     defaultConfig {
         applicationId = "com.dicoding.konektraapplication"
-        minSdk = 21
-        targetSdk = 33
+        minSdk = 24
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -41,7 +43,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    testOptions {
+        animationsDisabled = true
+    }
+
 }
+
+
 
 dependencies {
 
@@ -57,5 +65,41 @@ dependencies {
 
     implementation("androidx.datastore:datastore-preferences:1.0.0")
     implementation("androidx.preference:preference-ktx:1.2.1")
+
+    implementation("org.tensorflow:tensorflow-lite-support:0.4.4")
+    implementation("org.tensorflow:tensorflow-lite-metadata:0.4.4")
+    implementation("org.tensorflow:tensorflow-lite-gpu:2.13.0")
+    implementation("org.tensorflow:tensorflow-lite-gpu-delegate-plugin:0.4.4")
+    implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.4")
+
+    val cameraxVersion = "1.3.0"
+
+    implementation ("androidx.camera:camera-core:$cameraxVersion")
+    implementation("androidx.camera:camera-camera2:$cameraxVersion")
+    implementation("androidx.camera:camera-lifecycle:$cameraxVersion")
+    implementation("androidx.camera:camera-view:$cameraxVersion")
+
+    implementation ("com.google.mediapipe:tasks-vision:0.10.0")
+
+    val nav_version = "2.5.3"
+    implementation ("androidx.navigation:navigation-fragment-ktx:$nav_version")
+    implementation ("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    implementation ("androidx.window:window:1.1.0-alpha03")
+
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+
+    implementation("androidx.activity:activity-ktx:1.8.1")
+
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
 }

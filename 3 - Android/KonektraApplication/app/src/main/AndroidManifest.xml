@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <!-- Declare permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +19,9 @@
         android:theme="@style/Theme.KonektraApplication"
         tools:targetApi="31">
         <activity
+            android:name=".ui.sst.SignToTextActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.setting.SettingActivity"
             android:exported="false" />
         <activity
@@ -24,10 +31,10 @@
             android:name=".ui.tts.TextToSpeechActivity"
             android:exported="false" />
         <activity
-            android:name=".detail.DetailActivity"
+            android:name=".ui.detail.DetailActivity"
             android:exported="false" />
         <activity
-            android:name=".boardingpage.onBoardingPage"
+            android:name=".ui.boardingpage.onBoardingPage"
             android:exported="false" />
         <activity
             android:name=".ui.snk.SnK"

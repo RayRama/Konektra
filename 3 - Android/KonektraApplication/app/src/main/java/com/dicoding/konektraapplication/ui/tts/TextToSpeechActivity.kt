@@ -16,13 +16,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.konektraapplication.MainActivity
 import com.dicoding.konektraapplication.R
 import com.dicoding.konektraapplication.databinding.ActivityTextToSpeechBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.util.Locale
 
 
 class TextToSpeechActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
 
     private lateinit var textToSpeech: TextToSpeech
-    private lateinit var speakButton: Button
+    private lateinit var speakButton: FloatingActionButton
     private lateinit var editText: EditText
     private lateinit var btnHapus: Button
     private lateinit var btnSimpan: Button
@@ -45,7 +46,7 @@ class TextToSpeechActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         speakButton = findViewById(R.id.speakButton)
         editText = findViewById(R.id.EdText)
         btnHapus = findViewById(R.id.btnHapus)
-        btnSimpan = findViewById(R.id.btnSimpan)
+//        btnSimpan = findViewById(R.id.btnSimpan)
         textToSpeech = TextToSpeech(this,this)
 
 
@@ -62,13 +63,13 @@ class TextToSpeechActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
             editText.text.clear()
         }
 
-        btnSimpan.setOnClickListener {
-            val text = editText.text.toString()
-            if (text.isNotEmpty()) {
-                textToSpeechViewModel.addToHistory(text)
-                showToast("Teks disimpan ke dalam history.")
-            }
-        }
+//        btnSimpan.setOnClickListener {
+//            val text = editText.text.toString()
+//            if (text.isNotEmpty()) {
+//                textToSpeechViewModel.addToHistory(text)
+//                showToast("Teks disimpan ke dalam history.")
+//            }
+//        }
 
 //        btnHistory.setOnClickListener {
 //            startActivity(Intent(this, HistoryActivity::class.java))

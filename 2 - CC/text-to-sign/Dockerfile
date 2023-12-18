@@ -6,14 +6,17 @@ WORKDIR /app
 
 # Salin kode aplikasi dan file dependencies ke dalam container
 COPY requirements.txt .
-# Salin semua file yang ada di direktori ini ke dalam container
-COPY . . 
+COPY main.py .
+
+# Salin folder assets dan data ke dalam container
+COPY assets /app/assets
+COPY data /app/data
 
 # Install dependencies menggunakan pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Port yang perlu di-expose (sesuaikan dengan kebutuhan aplikasi Anda)
-EXPOSE 5000
+EXPOSE 8080
 
 # Perintah untuk menjalankan aplikasi saat container dimulai
 CMD ["python", "main.py"]

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutDescription="@xml/activity_on_boarding_page_scene"
-    tools:context=".boardingpage.onBoardingPage">
+    tools:context=".ui.boardingpage.onBoardingPage">
 
     <ImageView
         android:id="@+id/logoMenu1"
