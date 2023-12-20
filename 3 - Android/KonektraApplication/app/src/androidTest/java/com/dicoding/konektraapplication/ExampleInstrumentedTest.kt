@@ -65,10 +65,10 @@ class ExampleInstrumentedTest {
                 gestureRecognizerListener = object :
                     GestureRecognizerHelper.GestureRecognizerListener {
                     override fun onError(error: String, errorCode: Int) {
-                        // Print out the error
+
                         println(error)
 
-                        // Release the lock
+
                         lock.withLock {
                             condition.signal()
                         }
@@ -77,44 +77,44 @@ class ExampleInstrumentedTest {
                     override fun onResults(resultBundle: GestureRecognizerHelper.ResultBundle) {
                         recognizerResult = resultBundle
 
-                        // Release the lock and start verifying the result
+
                         lock.withLock {
                             condition.signal()
                         }
                     }
                 })
 
-        // Create Bitmap and convert to MPImage.
+
         val testImage = loadImage(TEST_IMAGE)
         val mpImage = BitmapImageBuilder(testImage).build()
 
-        // Run the hand gesture recognition on the sample image.
+
         gestureRecognizerHelper.recognizeAsync(
             mpImage, SystemClock.uptimeMillis()
         )
 
-        // Lock to wait the GestureRecognizerHelper return the value.
+
         lock.withLock {
             condition.await()
         }
 
-        // Verify that the recognizer is not null
+
         assertNotNull(recognizerResult)
 
-        // Expecting one hand for this test case
+
         val categories = recognizerResult!!.results.first().gestures().first()
 
-        // Verify that the categories are not empty
+
         assert(categories.isNotEmpty())
 
-        // Verify that the scores are correct
+
         assertEquals(
             expectedCategoriesForImageAndLiveStreamMode.first().score(),
             categories.first().score(),
             0.01f
         )
 
-        // Verify that the category names are consistent
+
         assertEquals(
             expectedCategoriesForImageAndLiveStreamMode.first().categoryName(),
             categories.first().categoryName()
@@ -134,13 +134,13 @@ class ExampleInstrumentedTest {
 
         val videoUri = getVideoUri(TEST_VIDEO)
 
-        // Run the gesture recognizer with the test video.
+
         val recognizerResult = gestureRecognizerHelper.recognizeVideoFile(
             videoUri,
             300
         )
 
-        // Verify that the gesture recognizer result is not null.
+
         assertNotNull(recognizerResult)
 
         // Average scores of all frames.
@@ -197,26 +197,26 @@ class ExampleInstrumentedTest {
 
         val bitmap = loadImage(TEST_IMAGE)
 
-        // Run the gesture recognizer with the test image.
+
         val recognizerResult =
             gestureRecognizerHelper.recognizeImage(bitmap!!)?.results?.first()
 
-        // Verify that the gesture recognizer result is not null.
+
         assertNotNull(recognizerResult)
 
-        // Expecting one hand for this test case
+
         val actualCategories =
             recognizerResult!!.gestures().first()
 
         assert(actualCategories.isNotEmpty())
 
-        // Verify that the categories are correct.
+
         assertEquals(
             expectedCategoriesForImageAndLiveStreamMode.first().categoryName(),
             actualCategories.first().categoryName()
         )
 
-        // Verify that the scores are correct.
+
         assertEquals(
             expectedCategoriesForImageAndLiveStreamMode.first().score(),
             actualCategories.first().score(), 0.01f

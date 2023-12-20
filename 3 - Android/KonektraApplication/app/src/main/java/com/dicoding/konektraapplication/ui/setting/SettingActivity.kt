@@ -1,5 +1,6 @@
 package com.dicoding.konektraapplication.ui.setting
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.dicoding.konektraapplication.R
@@ -22,5 +23,16 @@ class SettingActivity : AppCompatActivity() {
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+//        val settingsFragment = supportFragmentManager.findFragmentById(R.id.settings) as? SettingsFragment
+//        settingsFragment?.setOnCreditPreferenceClickListener {
+//            showCreditMenu()
+//        }
     }
+
+
+//    private fun showCreditMenu() {
+//        val intent = Intent(this, CreditActivity::class.java)
+//        startActivity(intent)
+//    }
+
 }

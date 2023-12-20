@@ -15,4 +15,9 @@
 
     </PreferenceCategory>
 
+<!--    <Preference-->
+<!--        android:key="credit_preference"-->
+<!--        android:title="@string/Credit"-->
+<!--        android:summary="@string/credit_preference_summary" />-->
+
 </PreferenceScreen>
