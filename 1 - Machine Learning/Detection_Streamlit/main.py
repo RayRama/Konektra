@@ -7,7 +7,6 @@ import streamlit as st
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
-import os
 import mediapipe as mp
 import av
 
@@ -33,8 +32,6 @@ def mediapipe_detection(image, model):
   return image, results
 
 def draw_landmarks(image, results):
-    # mp_drawing.draw_landmarks(image, results.face_landmarks, mp_holistic.FACEMESH_CONTOURS) # Draw face connections
-    # mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_holistic.POSE_CONNECTIONS) # Draw pose connections
   mp_drawing.draw_landmarks(image, results.left_hand_landmarks, mp_holistic.HAND_CONNECTIONS) # Draw left hand connections
   mp_drawing.draw_landmarks(image, results.right_hand_landmarks, mp_holistic.HAND_CONNECTIONS) # Draw right hand connections
 
@@ -96,8 +93,9 @@ def process_image(image, model, actions, sequence, sentences, threshold):
 
   image = cv2.flip(image, 1)
 
-  image = cv2.putText(image, ' '.join(sentences), (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2, cv2.LINE_AA)
+  image = cv2.rectangle(image, (0,0), (640, 40), (245, 117, 16), -1)
 
+  image = cv2.putText(image, ' '.join(sentences), (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2, cv2.LINE_AA)
 
   return image
 
@@ -115,49 +113,8 @@ def main():
 
         img = process_image(img, self.model, self.actions, self.sequence, self.sentences, self.threshold)
 
-        # img = cv2.flip(img, 1)
-
         return av.VideoFrame.from_ndarray(img, format="bgr24")
-        # # Make detections
-        # with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
-        #   while True:
-        #      flip_img = cv2.flip(img, 1)
-        #      image, results = mediapipe_detection(flip_img, holistic)
-             
-        #      draw_styled_landmarks(image, results)
 
-        #     #  keypoints = extract_keypoints(results)
-        #     # #  print(f'keypoints: {keypoints}') ada
-        #     #  self.sequence.append(keypoints)
-        #     # #  print(f'sequence: {self.sequence}') ada
-        #     #  self.sequence = self.sequence[-30:]
-        #     #  print(f"len: {len(self.sequence)}")
-        #     #  if len(self.sequence) == 30:
-        #     #     res = self.model.predict(np.expand_dims(self.sequence, axis=0))[0]
-        #     #     print(f'res: {res}')
-        #     #     if res[np.argmax(res)] > self.threshold:
-        #     #       if len(self.sentences) > 0:
-        #     #          if self.actions[np.argmax(res)] != self.sentences[-1]:
-        #     #             self.sentences.append(self.actions[np.argmax(res)])
-        #     #       else:
-        #     #         self.sentences.append(self.actions[np.argmax(res)])
-        #     #     # self.sentences.append(self.actions[0])
-        #     #     print(f'sentences: {self.sentences}')
-        #     #     if len(self.sentences) > 0:
-        #     #        self.sentences = self.sentences[-1:]
-                   
-
-        #     #  image = cv2.putText(image, ' '.join(self.sentences), (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2, cv2.LINE_AA)
-             
-        #     #  if len(self.sentences) > 0:
-        #     #     st.markdown(' '.join(self.sentences))
-        #     #  else:
-        #     #     print('no sentences')
-              
-        #      return av.VideoFrame.from_ndarray(image, format="bgr24")
-
-
-    
   webrtc_ctx = webrtc_streamer(
     key="loopback",
     mode=WebRtcMode.SENDRECV,
