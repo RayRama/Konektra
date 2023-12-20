@@ -40,7 +40,7 @@ def retrieve_images_by_titles(file_titles):
     images = []
     for file_title in file_titles:
         try:
-            image_path = os.path.join(os.path.dirname(__file__), 'assets', file_title + '.gif')
+            image_path = os.path.join(os.path.dirname(__file__), 'assets', file_title + '.webp')
             img = Image.open(image_path)
             images.append((file_title, img))  # Menambahkan nama file ke dalam tuple
         except FileNotFoundError:
@@ -67,7 +67,7 @@ def text_to_sign():
         response_data = []
 
         for file_title, img in images:
-            with open(os.path.join(os.path.dirname(__file__), 'assets', file_title + '.gif'), 'rb') as f:
+            with open(os.path.join(os.path.dirname(__file__), 'assets', file_title + '.webp'), 'rb') as f:
                 img_byte_array = f.read()
                 img_base64 = base64.b64encode(img_byte_array).decode('utf-8')
 

@@ -8,5 +8,6 @@
 *.png
 *.jpg
 *.npy
+*.mp4
 
 __pycache__/
