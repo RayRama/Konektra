@@ -3,7 +3,6 @@ from PIL import Image, UnidentifiedImageError
 import os
 import base64
 import re
-from waitress import serve
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -90,32 +89,3 @@ def text_to_sign():
     else:
         return jsonify({'error': f"Tidak ada gambar ditemukan untuk judul yang diberikan."}), status_code
 
-# @app.route('/get_images', methods=['GET'])
-# def get_images():
-    # file_titles = request.args.getlist('titles')
-    # images, status_code = retrieve_images_by_titles(file_titles)
-
-    # if images:
-    #     response_data = []
-
-    #     for file_title, img in images:
-    #         img_byte_array = Image.Image.tobytes(img)
-    #         img_base64 = base64.b64encode(img_byte_array).decode('utf-8')
-
-    #         file_tanpa_ekstensi = os.path.splitext(file_title)[0].lower()
-
-    #         response_data.append({'title': file_tanpa_ekstensi, 'image': img_base64})
-
-    #     # Menggabungkan judul menjadi satu dictionary
-    #     combined_response = {
-    #         'options': [{'title': entry['title']} for entry in response_data],
-    #         'images': [entry['image'] for entry in response_data]
-    #     }
-
-    #     response = jsonify(combined_response)
-    #     return response, 202
-    # else:
-    #     return jsonify({'error': f"Tidak ada gambar ditemukan untuk judul yang diberikan."}), status_code
-
-if __name__ == '__main__':
-    serve(app, host=host, port=port)

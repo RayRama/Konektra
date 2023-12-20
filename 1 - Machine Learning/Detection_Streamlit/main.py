@@ -102,8 +102,8 @@ def process_image(image, model, actions, sequence, sentences, threshold):
 def main():
   class VideoTransformer(VideoProcessorBase):
     def __init__(self) -> None:
-        self.actions = np.array(['a', 'b'])
-        self.model = load_model('hand.h5', self.actions)
+        self.actions = np.array(['halo', 'apa', 'kabar'])
+        self.model = load_model('model.h5', self.actions)
         self.sequence = []
         self.sentences = []
         self.threshold = 0.3

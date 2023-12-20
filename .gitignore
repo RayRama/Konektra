@@ -9,5 +9,7 @@
 *.jpg
 *.npy
 *.mp4
+*.docx
+*.tmp
 
 __pycache__/
