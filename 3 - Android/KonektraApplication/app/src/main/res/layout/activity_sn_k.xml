@@ -24,6 +24,7 @@
 
         <TextView
             android:id="@+id/termsText"
+            android:justificationMode="inter_word"
             android:fontFamily="@font/istokwebregular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

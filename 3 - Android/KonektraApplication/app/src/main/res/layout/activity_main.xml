@@ -90,6 +90,8 @@
             android:layout_width="89dp"
             android:layout_height="85dp"
             android:background="@drawable/bgtts"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/LLHome"
             app:layout_constraintEnd_toStartOf="@id/iv_ttsign"/>
@@ -157,6 +159,8 @@
             android:layout_width="89dp"
             android:layout_height="85dp"
             android:background="@drawable/bgtts2"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintStart_toEndOf="@id/cv_tts"
             app:layout_constraintTop_toTopOf="@id/cv_tts"
             app:layout_constraintEnd_toStartOf="@id/iv_stt"/>
@@ -178,6 +182,8 @@
             android:layout_width="89dp"
             android:layout_height="85dp"
             android:background="@drawable/bgsst"
+            android:clickable="true"
+            android:focusable="true"
             app:layout_constraintStart_toEndOf="@id/cv_ttsign"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/cv_tts"/>

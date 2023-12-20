@@ -18,7 +18,7 @@ class HistoryActivity : AppCompatActivity() {
     private lateinit var historyRecyclerView: RecyclerView
     private lateinit var textToSpeechViewModel: TextToSpeechViewModel
 
-    // Gantilah ini dengan daftar sebenarnya dari history items yang Anda miliki
+
     val historyItems = listOf(
         HistoryItem("Text 1", Date()),
         HistoryItem("Text 2", Date()),

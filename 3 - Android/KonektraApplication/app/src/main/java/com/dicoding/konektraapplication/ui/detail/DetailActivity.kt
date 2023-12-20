@@ -31,12 +31,12 @@ class DetailActivity : AppCompatActivity() {
         }
 
         val tvName : TextView = findViewById(R.id.tv_item_name)
-        val tvSummary : TextView = findViewById(R.id.tv_summary)
+//        val tvSummary : TextView = findViewById(R.id.tv_summary)
         val tvDescription : TextView = findViewById(R.id.tv_detail_description)
         val imgPhoto: ImageView = findViewById(R.id.img_item_photo)
 
         tvName.text = dataKonektra?.name
-        tvSummary.text = "Description"
+//        tvSummary.text = "Description"
         tvDescription.text = dataKonektra?.description
         imgPhoto.setImageResource(dataKonektra!!.photo)
 

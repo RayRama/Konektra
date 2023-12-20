@@ -7,8 +7,10 @@ import android.media.RingtoneManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -48,6 +50,7 @@ class TextToSpeechActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         btnHapus = findViewById(R.id.btnHapus)
 //        btnSimpan = findViewById(R.id.btnSimpan)
         textToSpeech = TextToSpeech(this,this)
+
 
 
         speakButton.setOnClickListener {
@@ -108,6 +111,7 @@ class TextToSpeechActivity : AppCompatActivity(),TextToSpeech.OnInitListener {
         performSomeActionAfterSpeech()
         textToSpeechViewModel.addToHistory(text)
     }
+
 
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()

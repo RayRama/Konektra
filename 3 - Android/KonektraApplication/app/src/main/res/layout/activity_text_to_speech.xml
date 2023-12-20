@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.tts.TextToSpeechActivity">
 
+
     <!-- Top Bar -->
     <RelativeLayout
         android:id="@+id/topBar"
@@ -65,7 +66,10 @@
             android:padding="16dp"
             android:hint="@string/long_description"
             android:textSize="16sp" />
+
     </ScrollView>
+
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottomBar"
@@ -73,6 +77,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_alignParentBottom="true">
+
 
 
         <!-- Tombol Mic -->
@@ -128,6 +133,5 @@
 <!--            android:padding="8dp" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </RelativeLayout>

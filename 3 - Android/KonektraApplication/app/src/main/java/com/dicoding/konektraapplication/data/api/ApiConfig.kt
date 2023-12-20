@@ -1,6 +1,7 @@
 package com.dicoding.konektraapplication.data.api
 
 import android.util.Config
+import com.dicoding.konektraapplication.BuildConfig.DEBUG
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -10,7 +11,7 @@ class ApiConfig {
     companion object{
         fun getApiServices(): ApiService {
 
-            val loggingInterceptor = if (Config.DEBUG){
+            val loggingInterceptor = if (DEBUG){
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
             }else{
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
@@ -21,7 +22,7 @@ class ApiConfig {
                 .build()
 
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://expres.dicoding.dev/v1/")
+                .baseUrl("https://textosign-z7ofvhkyyq-et.a.run.app/text_to_sign?text=Halo_Nama")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

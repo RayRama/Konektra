@@ -13,6 +13,7 @@ import com.dicoding.konektraapplication.databinding.ActivityMainBinding
 import com.dicoding.konektraapplication.ui.setting.NightMode
 import com.dicoding.konektraapplication.ui.setting.SettingActivity
 import com.dicoding.konektraapplication.ui.sst.SignToTextActivity
+import com.dicoding.konektraapplication.ui.sst.WebViewActivity
 import com.dicoding.konektraapplication.ui.tts.TextToSpeechActivity
 import java.util.Locale
 
@@ -83,4 +84,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }

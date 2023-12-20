@@ -1,10 +1,42 @@
 <resources>
     <string name="app_name">Konektra</string>
-    <string name="isi_snk">Terakhir diubah pada [28 September 2023]\n\nTerimakasih telah berkunjung di Konektra.\n\nSyarat dan Ketentuan berikut.. \nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="isi_snk">Terakhir diubah pada [28 September 2023]\n\nTerimakasih telah berkunjung di Konektra.\n\nSyarat dan Ketentuan berikut:
+    \n<b>1. Penerimaan Syarat dan Ketentuan</b>
+    \n   1.1 Dengan mengunduh, menginstal, atau menggunakan Aplikasi Konektra ("Aplikasi"), Anda setuju untuk terikat oleh syarat dan ketentuan penggunaan di bawah ini.
+    \n   1.2 Jika Anda tidak setuju dengan syarat dan ketentuan ini, harap untuk tidak mengakses atau menggunakan Aplikasi Konektra.
+    \n\n<b>2. Penggunaan Aplikasi Konektra</b>
+    \n   2.1 Aplikasi Konektra merupakan aplikasi bahasa isyarat yang menyediakan layanan Text-to-Speech (TTS), Text-to-Sign (TTS), Sign-to-Text (STT), dan fitur kamera dengan izin pengguna.
+    \n   2.2 Anda dapat menggunakan Aplikasi Konektra tanpa perlu mendaftar sebagai pengguna. Namun, penggunaan beberapa fitur, seperti menyimpan riwayat atau preferensi pengguna, mungkin memerlukan penyimpanan lokal pada perangkat Anda.
+    \n\n<b>3. Fitur Aplikasi</b>
+    \n    <b>3.1 Text-to-Speech (TTS):</b>
+    \n       3.1.1 Aplikasi menyediakan layanan TTS untuk mengubah teks menjadi ucapan suara.
+    \n       3.1.2 Pengguna dapat menggunakan fitur TTS tanpa memerlukan pendaftaran.
+    \n    <b>3.2 Text-to-Sign (TTS):</b>
+    \n       3.2.1 Aplikasi menyediakan layanan TTS untuk mengubah teks menjadi bahasa isyarat melalui representasi visual.
+    \n       3.2.2 Pengguna dapat mengakses fitur TTS tanpa perlu membuat akun pengguna.
+    \n    <b>3.3 Sign-to-Text (STT):</b>
+    \n       3.3.1 Aplikasi memiliki fitur STT yang memungkinkan pengguna mengonversi bahasa isyarat menjadi teks.
+    \n       3.3.2 Penggunaan STT tidak memerlukan proses pendaftaran.
+    \n    <b>3.4 Kamera dan Izin:</b>
+    \n       3.4.1 Aplikasi membutuhkan izin akses kamera untuk fitur tertentu, seperti interpretasi bahasa isyarat melalui gambar.
+    \n       3.4.2 Izin kamera bersifat opsional, dan Anda dapat mengubahnya melalui pengaturan perangkat.
+    \n\n<b>4. Kebijakan Privasi</b>
+    \n   4.1 Informasi lebih lanjut mengenai kebijakan privasi Aplikasi Konektra dapat diakses melalui menu pengaturan aplikasi.
+    \n   4.2 Aplikasi Konektra tidak mengumpulkan informasi pribadi pengguna tanpa izin.
+    \n\n<b>5. Pembaharuan Syarat dan Ketentuan</b>
+    \n   5.1 Syarat dan ketentuan ini dapat diperbarui sesuai kebijakan kami. Anda akan diberitahu tentang perubahan melalui pembaruan Aplikasi.
+    \n   5.2 Dengan melanjutkan penggunaan Aplikasi setelah perubahan ini, Anda dianggap telah menerima perubahan tersebut.
+    \n\n<b>6. Kontak Dukungan</b>
+    \n   6.1 Jika Anda memiliki pertanyaan atau masalah, hubungi tim dukungan kami melalui email di support@konektraapp.com.
+    \n   6.2 Kami akan berusaha memberikan tanggapan dan dukungan secepat mungkin.
+    \n\nTerima kasih telah menggunakan Aplikasi Konektra. Dengan menggunakan Aplikasi, Anda setuju untuk mematuhi syarat dan ketentuan di atas.
+    </string>
+
+
     <string name="boldSnK"><![CDATA[Syarat & Ketentuan]]></string>
     <string name="cbSnK">Saya telah membaca dan menyetujui syarat dan ketentuan aplikasi</string>
     <string name="title_menu_1">Terjemahkan</string>
-    <string name="desc_menu_1">Komunikasi tanpa\nbatas dan halanga</string>
+    <string name="desc_menu_1">Komunikasi tanpa\nbatas dan halangan</string>
     <string name="title_menu_2">Text to Speech</string>
     <string name="desc_menu_2">Ekspresikan isi hatimu\nmelalui suara</string>
     <string name="title_menu_3">Text to Sign</string>
@@ -22,14 +54,56 @@
     <string name="tts">Text To Speech</string>
     <string name="long_description">Silahkan Mengisi</string>
     <string-array name="data_name">
-        <item>The Use of Text-to-Speech Feature</item>
-        <item>The Use of Text-to-Sign Feature</item>
-        <item>The Use of Sign-to-Text Feature</item>
+        <item>Mengapa Kita Membutuhkan \nTeks To Speech?</item>
+        <item>Mengapa Kita Membutuhkan \nTeks To Sign?</item>
+        <item>Mengapa Kita Membutuhkan \nSign To Teks?</item>
     </string-array>
     <string-array name="data_description">
-        <item>A functionality where written text is converted into spoken words. This feature could be useful for providing spoken explanations, translations, or additional context to complement the signed content.</item>
-        <item>A valuable tool for expressing written information into the dynamic and expressive medium of sign language gestures, it facilitates effective communication by allowing users to deliver written content into the vocabulary of sign language.</item>
-        <item>A functionality that enables users to input gestures in sign language, with the app subsequently translating these visual expressions into written text. This feature empowers users to convert signed content into a readable and accessible format.</item>
+    <item>
+        Text-to-Speech (TTS) memiliki peran yang sangat penting dalam membantu individu yang memiliki kebutuhan khusus.
+        \nBerikut adalah deskripsi panjang tentang mengapa TTS sangat dibutuhkan untuk membantu orang-orang dengan kebutuhan khusus:
+        \n\n1. Difabel Penglihatan
+        \n\t\t\tAkses Informasi: Individu dengan kebutuhan khusus pada penglihatan, seperti tunanetra, dapat mengalami hambatan untuk membaca teks tertulis. TTS memungkinkan mereka untuk mengakses informasi dengan mendengarkan teks yang diubah menjadi ucapan.
+        \n\t\t\tPendidikan: Dalam konteks pendidikan, TTS memungkinkan siswa tunanetra untuk mengakses buku teks, materi pelajaran, dan sumber daya pembelajaran lainnya tanpa bergantung pada pembaca atau tutor.
+        \n2. Disabilitas Baca-Tulis
+        \n\t\t\tDukungan Literasi: Orang dengan kesulitan membaca atau menulis dapat diuntungkan dari TTS yang membacakan teks secara verbal. Ini mendukung perkembangan literasi dan membantu mereka dalam proses pembelajaran dan pekerjaan.
+        \n3. Gangguan Pendengaran
+        \n\n\t\t\tAlternatif Komunikasi: Individu dengan gangguan pendengaran mungkin menghadapi tantangan dalam memahami atau memproses teks tertulis. TTS dapat digunakan sebagai alternatif komunikasi untuk menyampaikan informasi secara lisan.
+    </item>
+        <item>
+        Bahasa isyarat adalah bentuk komunikasi yang penting bagi komunitas dengan kebutuhan khusus, terutama bagi individu dengan gangguan pendengaran. Dalam konteks ini, mengubah teks menjadi video dengan bahasa isyarat menjadi hal yang sangat bermanfaat. Berikut adalah beberapa alasan mengapa kita membutuhkan teks yang dapat diubah ke video untuk bahasa isyarat:
+        \n\n1. Aksesibilitas yang Meningkat:
+        \n\t\tVideo bahasa isyarat memberikan aksesibilitas yang lebih baik kepada individu yang tunarungu. Mereka dapat mengartikan pesan dan informasi dengan menggunakan bahasa isyarat, yang menjadi medium utama komunikasi bagi mereka.
+        \n2. Inklusi dan Komunikasi yang Efektif:
+        \n\t\tDengan teks yang dapat diubah ke video bahasa isyarat, kita meningkatkan inklusi dan memfasilitasi komunikasi sehari-hari. Individu yang menggunakan bahasa isyarat dapat berpartisipasi lebih aktif dalam berbagai situasi, termasuk di lingkungan pendidikan, pekerjaan, dan sosial.
+        \n3. Pendidikan yang Merata:
+        \n\t\tVideo bahasa isyarat dapat diintegrasikan ke dalam materi pembelajaran, mendukung pendidikan yang merata bagi semua siswa. Hal ini memberikan peluang yang setara untuk belajar dan mengakses informasi tanpa hambatan komunikasi.
+        \n4. Keterlibatan dan Kesadaran Masyarakat:
+        \n\t\tDengan adanya teks yang diubah ke dalam video bahasa isyarat, kita dapat meningkatkan keterlibatan masyarakat dengan individu tunarungu. Hal ini juga membantu meningkatkan kesadaran masyarakat terhadap kebutuhan dan kontribusi komunitas ini.
+        \n5. Penggunaan Teknologi untuk Kesejahteraan:
+        \n\t\tDengan mengubah teks menjadi video bahasa isyarat, kita mengoptimalkan penggunaan teknologi untuk kesejahteraan komunitas tunarungu. Ini mencakup pemanfaatan aplikasi dan platform digital untuk menyampaikan pesan dengan bahasa isyarat.
+        \n6. Kreativitas dan Ekspresi Pribadi:
+        \n\t\tVideo bahasa isyarat memberikan platform untuk mengekspresikan kreativitas dan ekspresi pribadi. Dalam situasi seperti presentasi, vlog, atau konten online, individu tunarungu dapat berbagi ide dan pengalaman mereka secara lebih kreatif.
+        \n\nMengubah teks menjadi video dengan bahasa isyarat bukan hanya tentang penyampaian informasi, tetapi juga tentang membangun jembatan komunikasi yang kuat dan mendukung inklusi. Ini menciptakan lingkungan di mana semua individu, tanpa memandang kemampuan pendengaran mereka, dapat berkomunikasi dan terlibat sepenuhnya dalam masyarakat.
+    </item>
+        <item>
+        Bahasa isyarat adalah bentuk komunikasi visual yang sangat penting bagi komunitas dengan kebutuhan khusus, terutama bagi individu dengan gangguan pendengaran. Adopsi bahasa isyarat ke dalam bentuk teks memberikan berbagai manfaat yang signifikan. Berikut adalah beberapa alasan mengapa kita membutuhkan bahasa isyarat yang diubah ke dalam teks:
+        \n\n1. Aksesibilitas Informasi:
+        \n\t\tMemungkinkan Akses untuk Semua: Mengonversi bahasa isyarat ke dalam teks memungkinkan aksesibilitas informasi bagi semua orang, termasuk mereka yang mungkin tidak memahami atau tidak menggunakan bahasa isyarat. Ini menciptakan lingkungan inklusif di mana informasi dapat diakses oleh berbagai kalangan masyarakat.
+        \n2. Komunikasi Lintas Budaya:
+        \n\t\tMendukung Komunikasi Lintas Budaya: Bahasa isyarat sering kali memiliki struktur dan kosakata yang unik. Mengubahnya ke dalam teks memungkinkan terjadinya komunikasi lintas budaya, memfasilitasi pemahaman yang lebih baik antarindividu dengan latar belakang budaya yang berbeda.
+        \n3. Dukungan di Lingkungan Pendidikan:
+        \n\t\tMendukung Pembelajaran: Adopsi bahasa isyarat ke dalam teks sangat mendukung lingkungan pendidikan. Siswa, guru, dan staf sekolah dapat dengan mudah mengakses dan memahami informasi terkait pelajaran, seminar, atau materi pendidikan lainnya.
+        \n4. Inklusi dalam Layanan Kesehatan:
+        \n\t\tMemfasilitasi Komunikasi di Layanan Kesehatan: Mengonversi bahasa isyarat ke dalam teks sangat penting di sektor layanan kesehatan. Ini memungkinkan pasien dengan gangguan pendengaran berkomunikasi dengan penyedia layanan kesehatan secara efektif, memastikan mereka menerima perawatan yang berkualitas.
+        \n5. Penguatan Keterlibatan Sosial:
+        \n\t\tMendorong Keterlibatan dalam Komunitas: Bahasa isyarat yang diubah menjadi teks dapat digunakan dalam konteks sosial dan komunitas. Ini mendorong keterlibatan individu dengan gangguan pendengaran dalam berbagai kegiatan sosial, pertemuan, dan acara komunitas.
+        \n6. Pemberdayaan Individu dengan Gangguan Pendengaran:
+        \n\t\tMemberikan Kemandirian: Bahasa isyarat dalam bentuk teks memberdayakan individu dengan gangguan pendengaran untuk berkomunikasi secara mandiri. Mereka dapat menyampaikan ide, pendapat, dan kebutuhan mereka tanpa kesulitan, meningkatkan kemandirian mereka dalam berbagai situasi.
+        \n7. Integrasi dengan Teknologi:
+        \n\t\tMendukung Penggunaan Teknologi: Dengan mengonversi bahasa isyarat ke dalam teks, kita mendukung penggunaan teknologi seperti aplikasi penerjemah otomatis atau platform daring. Hal ini mempermudah berkomunikasi di era teknologi informasi saat ini.
+        \n\nMengubah bahasa isyarat menjadi teks adalah langkah menuju inklusi dan aksesibilitas yang lebih besar. Hal ini tidak hanya memperkaya komunikasi antarindividu, tetapi juga membuka pintu bagi kolaborasi lintas budaya dan mendukung kemandirian individu dengan gangguan pendengaran dalam berbagai aspek kehidupan sehari-hari.
+    </item>
     </string-array>
     <integer-array name="data_photo">
         <item>@drawable/img1</item>
@@ -63,6 +137,9 @@
     <string name="label_hand_presence_confidence_threshold">Presense</string>
     <string name="label_delegate">Delegate</string>
     <string name="tv_gallery_placeholder">Klik + untuk memasukkan gambar</string>
+    <string name="Credit">Credit</string>
+    <string name="setting">Setting</string>
+    <string name="credit_preference_summary">Klik disini untuk melihat credit</string>
     <string-array name="delegate_spinner_titles">
         <item>CPU</item>
         <item>GPU</item>
