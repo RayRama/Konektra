@@ -1,8 +1,9 @@
-opencv-python
-opencv-python-headless
-streamlit
-streamlit-webrtc
-tensorflow
-numpy
-mediapipe
-av
+opencv-python==4.8.1.78
+opencv-python-headless==4.8.1.78
+streamlit==1.29.0
+streamlit-webrtc==0.47.1
+tensorflow==2.11.1
+numpy==1.26.2
+mediapipe==0.10.8
+av==11.0.0
+
