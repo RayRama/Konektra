@@ -1,0 +1,9 @@
+<!-- res/drawable/edit_text_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/transparent" />
+    <corners android:radius="12dp" /> <!-- Sesuaikan radius sesuai keinginan -->
+    <stroke
+        android:width="2dp"
+    android:color="@color/black" /> <!-- Ganti dengan warna border yang diinginkan -->
+</shape>
