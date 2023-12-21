@@ -32,6 +32,7 @@ class SnK : AppCompatActivity() {
             continueButton.isClickable = isChecked
             continueButton.alpha = if (isChecked) 1.0f else 0.5f
         }
+
     }
 
     fun onContinueButtonClick(view: View) {

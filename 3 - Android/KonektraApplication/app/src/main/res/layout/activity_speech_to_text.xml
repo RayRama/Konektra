@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.tts.TextToSpeechActivity">
@@ -10,7 +9,7 @@
 
     <!-- Top Bar -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/topBar"
+        android:id="@+id/topBarSpeech"
         android:background="@color/Blue"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -20,7 +19,7 @@
 
         <!-- Tombol Back -->
         <TextView
-            android:id="@+id/btnBack"
+            android:id="@+id/btnBackSpeech"
             android:layout_width="45dp"
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
@@ -36,7 +35,7 @@
 
         <!-- Tulisan "Speech To Text" -->
         <TextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/tvTitleSpeech"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -44,13 +43,13 @@
             android:text="@string/tts"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/btnBack"
-            app:layout_constraintEnd_toStartOf="@id/ivKonektra"
+            app:layout_constraintStart_toEndOf="@id/btnBackSpeech"
+            app:layout_constraintEnd_toStartOf="@id/ivKonektraSpeech"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <ImageView
-            android:id="@+id/ivKonektra"
+            android:id="@+id/ivKonektraSpeech"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginEnd="8dp"
@@ -60,14 +59,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Tombol History -->
-<!--        <Button-->
-<!--            android:id="@+id/btnHistory"-->
-<!--            android:layout_width="50dp"-->
-<!--            android:layout_height="45dp"-->
-<!--            android:layout_alignParentEnd="true"-->
-<!--            android:layout_centerVertical="true"-->
-<!--            android:background="@drawable/history"-->
-<!--            android:padding="8dp" />-->
+        <!--        <Button-->
+        <!--            android:id="@+id/btnHistory"-->
+        <!--            android:layout_width="50dp"-->
+        <!--            android:layout_height="45dp"-->
+        <!--            android:layout_alignParentEnd="true"-->
+        <!--            android:layout_centerVertical="true"-->
+        <!--            android:background="@drawable/history"-->
+        <!--            android:padding="8dp" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -77,56 +76,52 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/bgkonektra"
-        app:layout_constraintBottom_toTopOf="@id/bottomBar"
-        app:layout_constraintTop_toBottomOf="@id/topBar">
+        app:layout_constraintBottom_toTopOf="@id/bottomBarSpeech"
+        app:layout_constraintTop_toBottomOf="@id/topBarSpeech">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cons"
+            android:id="@+id/consSpeech"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/edit_text_border">
 
-            <EditText
-                android:id="@+id/EdText"
+            <TextView
+                android:id="@+id/EdTextSpeech"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:hint="Masukkan Teks Disini"
                 android:padding="16dp"
-                android:textColor="@color/black"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@id/cons"
-                app:layout_constraintEnd_toEndOf="@id/cons"
-                app:layout_constraintStart_toStartOf="@id/cons"
-                app:layout_constraintTop_toTopOf="@id/cons"
-                app:layout_constraintVertical_bias="0.0" />
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
 
-<!--    <Button-->
-<!--        android:id="@+id/bt_speech"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="kontol"-->
-<!--        android:background="@drawable/btn_background"-->
-<!--        android:layout_margin="16dp"-->
-<!--        app:layout_constraintBottom_toTopOf="@id/bottomBar"-->
-<!--        />-->
+    <!--    <Button-->
+    <!--        android:id="@+id/bt_speech"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="kontol"-->
+    <!--        android:background="@drawable/btn_background"-->
+    <!--        android:layout_margin="16dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/bottomBar"-->
+    <!--        />-->
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/bottomBar"
+        android:id="@+id/bottomBarSpeech"
         android:background="@color/Blue"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/speakButton"
+            android:id="@+id/speakButtonSpeech"
             android:layout_width="63dp"
             android:layout_height="57dp"
             android:layout_alignParentBottom="true"
@@ -134,52 +129,63 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:backgroundTint="@color/urianBlue"
-            app:layout_constraintStart_toStartOf="@id/bottomBar"
+            app:layout_constraintStart_toStartOf="@id/bottomBarSpeech"
             app:fabCustomSize="58dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:maxImageSize="30dp"
-            app:srcCompat="@drawable/baseline_play_arrow_24" />
+            app:srcCompat="@drawable/baseline_mic_24" />
 
         <TextView
-            android:id="@+id/iv_hapus"
+            android:id="@+id/iv_hapusSpeech"
             android:layout_width="28dp"
             android:layout_height="30dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="27dp"
             android:background="@drawable/trash"
-            app:layout_constraintEnd_toStartOf="@id/speakButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackgroundBorderless"/>
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            app:layout_constraintEnd_toStartOf="@id/speakButtonSpeech"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="47dp"
             android:layout_height="22dp"
+            android:layout_marginBottom="16dp"
             android:gravity="center"
             android:text="@string/delete_button"
             android:textColor="@color/black"
             android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/iv_hapus"
-            app:layout_constraintStart_toStartOf="@id/iv_hapus"
-            app:layout_constraintTop_toBottomOf="@id/iv_hapus" />
+            app:layout_constraintEnd_toEndOf="@id/iv_hapusSpeech"
+            app:layout_constraintStart_toStartOf="@id/iv_hapusSpeech"
+            app:layout_constraintTop_toBottomOf="@id/iv_hapusSpeech" />
 
         <TextView
-            android:id="@+id/sttSpeech"
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="@string/speech_to_text"
+            android:id="@+id/homeSpeech"
+            android:layout_width="36dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/baseline_home_24"
             android:textColor="@color/Red"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackgroundBorderless"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/speakButtonSpeech"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/homeTitle"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Home"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/homeSpeech"
+            app:layout_constraintStart_toStartOf="@id/homeSpeech"
+            app:layout_constraintTop_toBottomOf="@id/homeSpeech" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

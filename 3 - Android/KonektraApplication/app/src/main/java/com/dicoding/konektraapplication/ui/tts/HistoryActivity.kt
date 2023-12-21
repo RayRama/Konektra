@@ -30,26 +30,20 @@ class HistoryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_history)
 
         textToSpeechViewModel = ViewModelProvider(this).get(TextToSpeechViewModel::class.java)
-        historyAdapter = HistoryAdapter(textToSpeechViewModel.historyList)
+//        historyAdapter = HistoryAdapter(textToSpeechViewModel.historyList)
 
         historyRecyclerView = findViewById(R.id.historyRecyclerView)
         historyRecyclerView.layoutManager = LinearLayoutManager(this)
         historyRecyclerView.adapter = historyAdapter
 
-
         val historyRecyclerView: RecyclerView = findViewById(R.id.historyRecyclerView)
         historyRecyclerView.layoutManager = LinearLayoutManager(this)
         historyRecyclerView.adapter = historyAdapter
 
-
-
-        val clearHistoryButton: Button = findViewById(R.id.clearHistoryButton)
-        clearHistoryButton.setOnClickListener {
-            // Panggil fungsi clearHistory pada ViewModel
-            textToSpeechViewModel.clearHistory()
-        }
-
-
+//        val clearHistoryButton: Button = findViewById(R.id.clearHistoryButton)
+//        clearHistoryButton.setOnClickListener {
+//            // Panggil fungsi clearHistory pada ViewModel
+//            textToSpeechViewModel.clearHistory()
+//        }
     }
-
 }

@@ -94,3 +94,10 @@ git clone https://github.com/RayRama/Konektra.git
 - For Android
   - You can download the apk from [here](google.com) TODO: Add the link.
   - If you want to build the apk by yourself, you can use Android Studio. But, you need to install the required packages first. You can install the required packages by using the code below.
+  - Instalation and Running Apps
+      - Open the project in Android Studio and select “Open an existing Android Studio project”
+      - Navigate to the project”s directory and select it.
+      - Allow Android Studio to sync the project, downloading any necessary dependencies.
+      - Connect your Android device to your computer or use an emulator.
+      - Click the "Run" button (green play icon) to build and run the app on your device or emulator.
+      - Allow the app to build and install; it should automatically launch on your chosen device or emulator.

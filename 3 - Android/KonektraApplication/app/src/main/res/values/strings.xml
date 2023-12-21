@@ -27,7 +27,7 @@
     \n   5.1 Syarat dan ketentuan ini dapat diperbarui sesuai kebijakan kami. Anda akan diberitahu tentang perubahan melalui pembaruan Aplikasi.
     \n   5.2 Dengan melanjutkan penggunaan Aplikasi setelah perubahan ini, Anda dianggap telah menerima perubahan tersebut.
     \n\n<b>6. Kontak Dukungan</b>
-    \n   6.1 Jika Anda memiliki pertanyaan atau masalah, hubungi tim dukungan kami melalui email di support@konektraapp.com.
+    \n   6.1 Jika Anda memiliki pertanyaan atau masalah, hubungi tim dukungan kami melalui email di konektra.app@gmail.com.
     \n   6.2 Kami akan berusaha memberikan tanggapan dan dukungan secepat mungkin.
     \n\nTerima kasih telah menggunakan Aplikasi Konektra. Dengan menggunakan Aplikasi, Anda setuju untuk mematuhi syarat dan ketentuan di atas.
     </string>
@@ -57,6 +57,7 @@
         <item>Mengapa Kita Membutuhkan \nTeks To Speech?</item>
         <item>Mengapa Kita Membutuhkan \nTeks To Sign?</item>
         <item>Mengapa Kita Membutuhkan \nSign To Teks?</item>
+        <item>Credit</item>
     </string-array>
     <string-array name="data_description">
     <item>
@@ -104,11 +105,19 @@
         \n\t\tMendukung Penggunaan Teknologi: Dengan mengonversi bahasa isyarat ke dalam teks, kita mendukung penggunaan teknologi seperti aplikasi penerjemah otomatis atau platform daring. Hal ini mempermudah berkomunikasi di era teknologi informasi saat ini.
         \n\nMengubah bahasa isyarat menjadi teks adalah langkah menuju inklusi dan aksesibilitas yang lebih besar. Hal ini tidak hanya memperkaya komunikasi antarindividu, tetapi juga membuka pintu bagi kolaborasi lintas budaya dan mendukung kemandirian individu dengan gangguan pendengaran dalam berbagai aspek kehidupan sehari-hari.
     </item>
+        <item>1. Ferdina Azka Kunthi Wardani (Narasumber Teman Bisu)
+            \n2. Nicholas Renotte (Referensi tutorial)
+            \n3. Iis (Peraga Bahasa Isyarat / Guru SLB sebutin namanya)
+            \n4. Muhammad Raihan Nismara (Project Management)
+            \n5. Adam Rozaq Sobari (Cloud Computing)
+            \n6. Nur Anisa Rizky (Informan Bahasa Isyarat)
+        </item>
     </string-array>
     <integer-array name="data_photo">
         <item>@drawable/img1</item>
         <item>@drawable/img2</item>
         <item>@drawable/img3</item>
+        <item>@drawable/logocredit</item>
     </integer-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -140,6 +149,9 @@
     <string name="Credit">Credit</string>
     <string name="setting">Setting</string>
     <string name="credit_preference_summary">Klik disini untuk melihat credit</string>
+    <string name="searchbar_hint">Ketik disini</string>
+    <string name="speech_to_text">Speech To Text -></string>
+    <string name="SpeechToText">Speech To Text</string>
     <string-array name="delegate_spinner_titles">
         <item>CPU</item>
         <item>GPU</item>

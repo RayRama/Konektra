@@ -3,6 +3,7 @@ package com.dicoding.konektraapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.konektraapplication.data.adapter.ListKonektraAdapter
 import com.dicoding.konektraapplication.data.Konektra
 import com.dicoding.konektraapplication.databinding.ActivityMainBinding
+import com.dicoding.konektraapplication.ui.TextToSign.TextToSignActivity
 import com.dicoding.konektraapplication.ui.setting.NightMode
 import com.dicoding.konektraapplication.ui.setting.SettingActivity
 import com.dicoding.konektraapplication.ui.sst.SignToTextActivity
@@ -43,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         showRecyclerList()
         tts()
         sst()
+//        textToSign()
         setting()
     }
 
@@ -81,6 +84,13 @@ class MainActivity : AppCompatActivity() {
     private fun sst(){
         binding.ivStt.setOnClickListener {
             val intent = Intent(this, SignToTextActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun textToSign(){
+        binding.ivTts.setOnClickListener {
+            val intent = Intent(this, TextToSignActivity::class.java)
             startActivity(intent)
         }
     }

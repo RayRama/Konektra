@@ -1,18 +1,21 @@
 // TextToSpeechViewModel.kt
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.dicoding.konektraapplication.data.HistoryItem
 import java.util.*
 
 class TextToSpeechViewModel : ViewModel() {
 
-    private val _historyList = mutableListOf<HistoryItem>()
-    val historyList: List<HistoryItem> get() = _historyList.toList()
+    private val _textToSpeech = MutableLiveData<String>()
+    val textToSpeech: LiveData<String>
+        get() = _textToSpeech
 
-    fun addToHistory(text: String) {
-        _historyList.add(HistoryItem(text, Date()))
+    fun setTextToSpeech(text: String) {
+        _textToSpeech.value = text
     }
 
-    fun clearHistory() {
-        _historyList.clear()
+    fun clearTextToSpeech() {
+        _textToSpeech.value = ""
     }
 }

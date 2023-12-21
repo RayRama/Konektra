@@ -2,8 +2,6 @@ package com.dicoding.konektraapplication.ui.sst
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.dicoding.konektraapplication.data.repository.KonektraRepository
-
 class SignToTextViewModel : ViewModel() {
     private var _delegate: Int = GestureRecognizerHelper.DELEGATE_CPU
     private var _minHandDetectionConfidence: Float =

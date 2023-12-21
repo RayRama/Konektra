@@ -5,18 +5,18 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Response(
+data class SignResponse(
 
 	@field:SerializedName("Response")
-	val response: List<ResponseItem?>? = null
+	val signResponse: List<SignResponseItem>
 ):Parcelable
 
 @Parcelize
-data class ResponseItem(
+data class SignResponseItem(
 
 	@field:SerializedName("image")
-	val image: String? = null,
+	val image: String,
 
 	@field:SerializedName("title")
-	val title: String? = null
+	val title: String
 ):Parcelable
