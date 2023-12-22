@@ -76,7 +76,6 @@
         android:id="@+id/descriptionScrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/bgkonektra"
         app:layout_constraintBottom_toTopOf="@id/bottomBar"
         app:layout_constraintTop_toBottomOf="@id/topBar">
 
@@ -95,7 +94,6 @@
                 android:layout_marginEnd="10dp"
                 android:hint="Masukkan Teks Disini"
                 android:padding="16dp"
-                android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="@id/cons"
                 app:layout_constraintEnd_toEndOf="@id/cons"
