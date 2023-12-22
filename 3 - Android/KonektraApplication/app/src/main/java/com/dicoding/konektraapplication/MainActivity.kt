@@ -3,7 +3,6 @@ package com.dicoding.konektraapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,7 +13,6 @@ import com.dicoding.konektraapplication.databinding.ActivityMainBinding
 import com.dicoding.konektraapplication.ui.TextToSign.TextToSignActivity
 import com.dicoding.konektraapplication.ui.setting.NightMode
 import com.dicoding.konektraapplication.ui.setting.SettingActivity
-import com.dicoding.konektraapplication.ui.sst.SignToTextActivity
 import com.dicoding.konektraapplication.ui.sst.WebViewActivity
 import com.dicoding.konektraapplication.ui.tts.TextToSpeechActivity
 import java.util.Locale
@@ -45,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         showRecyclerList()
         tts()
         sst()
-//        textToSign()
+        textToSign()
         setting()
     }
 
@@ -83,13 +81,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun sst(){
         binding.ivStt.setOnClickListener {
-            val intent = Intent(this, SignToTextActivity::class.java)
+            val intent = Intent(this, WebViewActivity::class.java)
             startActivity(intent)
         }
     }
 
     private fun textToSign(){
-        binding.ivTts.setOnClickListener {
+        binding.ivTtsign.setOnClickListener {
             val intent = Intent(this, TextToSignActivity::class.java)
             startActivity(intent)
         }

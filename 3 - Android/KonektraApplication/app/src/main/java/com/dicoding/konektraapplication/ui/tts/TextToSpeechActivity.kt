@@ -1,35 +1,20 @@
 package com.dicoding.konektraapplication.ui.tts
 
-import HistoryAdapter
 import TextToSpeechViewModel
 import android.content.Intent
-import android.media.RingtoneManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.speech.RecognitionListener
-import android.speech.RecognizerIntent
-import android.speech.SpeechRecognizer
 import android.speech.tts.TextToSpeech
-import android.view.View
-import android.widget.Button
 import android.widget.EditText
-import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.konektraapplication.MainActivity
 import com.dicoding.konektraapplication.R
 import com.dicoding.konektraapplication.databinding.ActivityTextToSpeechBinding
 import com.dicoding.konektraapplication.ui.speechToText.SpeechToTextActivity
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.lang.Exception
-import java.util.ArrayList
 import java.util.Locale
-import java.util.Objects
 
 
 class TextToSpeechActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
@@ -119,10 +104,6 @@ class TextToSpeechActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 Toast.LENGTH_SHORT
             ).show()
         }
-    }
-
-    private fun showToast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     private fun performSomeActionAfterSpeech() {

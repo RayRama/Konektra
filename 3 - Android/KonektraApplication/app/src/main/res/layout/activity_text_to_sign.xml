@@ -7,16 +7,16 @@
     tools:context=".ui.TextToSign.TextToSignActivity">
 
     <RelativeLayout
-        android:id="@+id/topBar"
+        android:id="@+id/titleBar"
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/Blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/btnBack"
+            android:id="@+id/btnBackText"
             android:layout_width="45dp"
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
@@ -37,51 +37,52 @@
             android:textSize="20sp"
             android:textStyle="bold" />
     </RelativeLayout>
-
-    <com.google.android.material.search.SearchBar
-        android:id="@+id/search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="100dp"
-        android:hint="@string/searchbar_hint"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <com.google.android.material.search.SearchView
-        android:id="@+id/search_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:hint="@string/searchbar_hint"
-        app:layout_anchor="@id/search_bar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </com.google.android.material.search.SearchView>
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_sign"
+        android:id="@+id/rvTTS"
         android:layout_width="match_parent"
-        android:layout_height="560dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/titleBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/constraint"/>
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:background="@drawable/edit_text_border"
+        android:layout_margin="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/edKata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="58dp"
+            android:hint="Silahkan Masukkan Kata Disini"
+            android:background="@drawable/edit_text_line"
+            app:layout_constraintEnd_toStartOf="@id/btnKirim"
+            app:layout_constraintBottom_toBottomOf="@id/constraint"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toTopOf="@id/constraint" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnKirim"
+            android:layout_width="296dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            app:fabCustomSize="45dp"
+            app:layout_constraintBottom_toBottomOf="@id/constraint"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintTop_toTopOf="@id/constraint"
+            app:maxImageSize="20dp"
+            app:srcCompat="@drawable/baseline_send_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

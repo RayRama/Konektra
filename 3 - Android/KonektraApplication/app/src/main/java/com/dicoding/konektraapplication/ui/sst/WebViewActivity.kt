@@ -24,7 +24,7 @@ class WebViewActivity : AppCompatActivity() {
 
         webView.webViewClient = object : WebViewClient(){
             override fun onPageFinished(view: WebView, url: String) {
-                view.loadUrl("")
+                view.loadUrl("javascript:alert('Sign To Text cannot be opened due to many limitations in Google Cloud Platform')")
             }
         }
         webView.webChromeClient = object :  WebChromeClient(){
@@ -39,6 +39,6 @@ class WebViewActivity : AppCompatActivity() {
                 return true
             }
         }
-        webView.loadUrl("https://jkt48.com/")
+        webView.loadUrl("")
     }
 }

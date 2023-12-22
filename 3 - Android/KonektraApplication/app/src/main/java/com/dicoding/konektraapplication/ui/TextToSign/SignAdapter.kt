@@ -1,59 +1,52 @@
 package com.dicoding.konektraapplication.ui.TextToSign
 
+import android.graphics.ImageDecoder
+import android.graphics.drawable.AnimatedImageDrawable
+import android.graphics.drawable.Drawable
+import android.os.Build
+import android.util.Base64
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
+import androidx.annotation.RequiresApi
+
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.dicoding.konektraapplication.data.model.SignResponseItem
-import com.dicoding.konektraapplication.databinding.ItemRowSignBinding
 
-class SignAdapter : ListAdapter<SignResponseItem, SignAdapter.MyViewHolder>(DIFF_CALLBACK) {
-    private var onItemClickCallback: OnItemClickCallback? = null
+import com.dicoding.konektraapplication.data.pref.Model
+import com.dicoding.konektraapplication.databinding.ItemRowSignLanguageBinding
+import java.nio.ByteBuffer
 
-    fun setOnItemClickCallback (onItemClickCallback: OnItemClickCallback) {
-        this.onItemClickCallback = onItemClickCallback
-    }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding = ItemRowSignBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return MyViewHolder(binding)
-    }
-
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val review = getItem(position)
-        holder.bind(review)
-    }
-
-    inner class MyViewHolder(val binding: ItemRowSignBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(user: SignResponseItem) {
-            binding.root.setOnClickListener {
-                onItemClickCallback?.onItemClicked(user)
-            }
-            with(binding) {
-                Glide.with(itemView)
-                    .load(user.image)
-                    .centerCrop()
-                    .into(ivSign)
-                tvTitle.text = user.title
+class SignAdapter(private val tts: List<Model>): RecyclerView.Adapter<SignAdapter.TTSViewHolder>() {
+    class TTSViewHolder(private val binding: ItemRowSignLanguageBinding): RecyclerView.ViewHolder(binding.root) {
+        @RequiresApi(Build.VERSION_CODES.P)
+        fun bind(item: Model) {
+            binding.tvKata.text = item.title
+            if (item.image.isNotEmpty()) {
+                val drawable = decodeBase64ToDrawable(item.image)
+                if (drawable is AnimatedImageDrawable) {
+                    binding.ivKata.setImageDrawable(drawable)
+                    drawable.start()
+                }
             }
         }
     }
 
-    companion object {
-        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<SignResponseItem>() {
-            override fun areItemsTheSame(oldItem: SignResponseItem, newItem: SignResponseItem): Boolean {
-                return oldItem.title == newItem.title
-            }
-
-            override fun areContentsTheSame(oldItem: SignResponseItem, newItem: SignResponseItem): Boolean {
-                return oldItem == newItem
-            }
-        }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TTSViewHolder {
+        val binding = ItemRowSignLanguageBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return TTSViewHolder(binding)
     }
 
-    interface OnItemClickCallback {
-        fun onItemClicked(data: SignResponseItem)
+    override fun getItemCount(): Int = tts.size
+
+    @RequiresApi(Build.VERSION_CODES.P)
+    override fun onBindViewHolder(holder: TTSViewHolder, position: Int) {
+        holder.bind(tts[position])
     }
+}
+
+@RequiresApi(Build.VERSION_CODES.P)
+private fun decodeBase64ToDrawable(input: String?): Drawable {
+    val decodedBytes = Base64.decode(input, Base64.DEFAULT)
+    val byteBuffer = ByteBuffer.wrap(decodedBytes)
+    return ImageDecoder.decodeDrawable(ImageDecoder.createSource(byteBuffer))
 }

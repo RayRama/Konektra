@@ -2,12 +2,12 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="@android:color/white" /> <!-- Sesuaikan dengan warna latar belakang EditText -->
+            <solid android:color="@color/transparent" /> <!-- Sesuaikan dengan warna latar belakang EditText -->
         </shape>
     </item>
     <item android:top="-2dp">
         <shape android:shape="rectangle">
-            <solid android:color="@android:color/white" /> <!-- Sesuaikan dengan warna latar belakang EditText -->
+            <solid android:color="@color/transparent" /> <!-- Sesuaikan dengan warna latar belakang EditText -->
         </shape>
     </item>
 </layer-list>
