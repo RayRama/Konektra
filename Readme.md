@@ -1,8 +1,7 @@
-# Under development
-
 ## Konektra
+[![Project Presentation](https://img.shields.io/badge/Project%20Presentation-Youtube-red)](https://youtu.be/3PeMEjTAM-k)
 
-TBA (To be Announced)
+Konektra (Koneksi Tuna Rungu dan Tunawicara) comes as an innovative solution to bridge the **communication between** **"Teman Bisu or Teman Tuli"** and **"Teman Dengar"**. This application is specifically designed to facilitate interaction and enrich relationships between individuals with different hearing needs.
 
 ## Members of Team Konektra
 
